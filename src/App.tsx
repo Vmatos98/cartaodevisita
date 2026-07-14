@@ -131,20 +131,20 @@ END:VCARD`;
   };
 
   return (
-    <div className="text-slate-100 min-h-screen flex flex-col px-4 py-4 relative overflow-x-hidden w-full">
+    <div className="text-slate-100 min-h-screen flex flex-col px-5 py-5 relative overflow-x-hidden w-full glass-card">
       {/* Container Principal do Cartão */}
-      <main className="w-full glass-card rounded-2xl px-6 py-8 relative z-10 transition-all duration-300 flex-grow flex flex-col justify-between">
+      <main className="w-full relative z-10 flex-grow flex flex-col">
         <div>
           {/* Header do Cartão: Logo */}
-          <div className="flex justify-center items-center mb-6 w-full">
-            <img src="/logo.png" alt="Automatas Tech Logo" className="h-24 object-contain" />
+          <div className="flex justify-center items-center mb-8 w-full">
+            <img src="/logo.png" alt="Automatas Tech Logo" className="h-28 object-contain" />
           </div>
 
           {/* Avatar & Perfil do Funcionário */}
-          <div className="flex flex-col items-center text-center mt-4 mb-5">
-            <div className="relative mb-4">
+          <div className="flex flex-col items-center text-center mt-2 mb-6">
+            <div className="relative mb-5">
               {/* Foto de Perfil com Anel de Gradiente */}
-              <div className="w-24 h-24 rounded-full p-[2px] bg-gradient-to-tr from-brand-primary via-blue-500 to-brand-secondary neon-glow relative overflow-hidden">
+              <div className="w-32 h-32 rounded-full p-[3px] bg-gradient-to-tr from-brand-primary via-blue-500 to-brand-secondary neon-glow relative overflow-hidden">
                 <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden">
                   <img
                     src={profile.photo}
@@ -158,67 +158,67 @@ END:VCARD`;
                 </div>
               </div>
               {/* Badge de Verificado */}
-              <span className="absolute bottom-0 right-1 bg-indigo-500 text-white rounded-full p-1 border-2 border-slate-900 shadow flex items-center justify-center">
-                <Check className="w-3 h-3 text-white" />
+              <span className="absolute bottom-1 right-1 bg-indigo-500 text-white rounded-full p-1.5 border-2 border-slate-900 shadow flex items-center justify-center">
+                <Check className="w-4 h-4 text-white" />
               </span>
             </div>
 
             {/* Nome, Cargo e Bio do Funcionário */}
-            <h1 className="text-3xl font-bold tracking-tight text-white">{profile.name}</h1>
-            <p className="text-base text-brand-primary mt-1 font-medium">{profile.role}</p>
-            <p className="text-sm text-slate-400 mt-2 max-w-sm px-2">{profile.bio}</p>
+            <h1 className="text-4xl font-bold tracking-tight text-white">{profile.name}</h1>
+            <p className="text-lg text-brand-primary mt-2 font-medium">{profile.role}</p>
+            <p className="text-base text-slate-400 mt-3 w-full px-2">{profile.bio}</p>
 
             {/* Contatos Diretos do Funcionário (Top Section) */}
-            <div className="flex gap-3 mt-5 w-full">
+            <div className="flex gap-4 mt-6 w-full">
               <a
                 href={`https://wa.me/${profile.whatsapp}?text=Olá%20${encodeURIComponent(
                   profile.name
                 )}!%20Vim%20através%20do%20seu%20cartão%20NFC.`}
                 target="_blank"
                 rel="noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-semibold hover:bg-teal-500/20 hover:border-teal-500/40 transition-all cursor-pointer active:scale-98"
+                className="flex-1 flex items-center justify-center gap-2 py-4 px-4 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-400 text-base font-semibold hover:bg-teal-500/20 hover:border-teal-500/40 transition-all cursor-pointer active:scale-98"
               >
-                <FaWhatsapp className="w-4 h-4" />
+                <FaWhatsapp className="w-5 h-5" />
                 WhatsApp
               </a>
               <a
                 href={`mailto:${profile.email}`}
-                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-semibold hover:bg-indigo-500/20 hover:border-indigo-500/40 transition-all cursor-pointer active:scale-98"
+                className="flex-1 flex items-center justify-center gap-2 py-4 px-4 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-base font-semibold hover:bg-indigo-500/20 hover:border-indigo-500/40 transition-all cursor-pointer active:scale-98"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-5 h-5" />
                 E-mail
               </a>
             </div>
           </div>
 
           {/* Divisor Elegante de Seção */}
-          <div className="relative flex py-6 items-center">
+          <div className="relative flex py-7 items-center">
             <div className="flex-grow border-t border-white/10"></div>
-            <span className="flex-shrink mx-4 text-[10px] uppercase tracking-widest text-slate-500 font-bold bg-slate-950/20 px-3 py-1 rounded border border-white/5">
+            <span className="flex-shrink mx-4 text-xs uppercase tracking-widest text-slate-500 font-bold bg-slate-950/20 px-4 py-1.5 rounded-lg border border-white/5">
               Contatos da Empresa
             </span>
             <div className="flex-grow border-t border-white/10"></div>
           </div>
 
           {/* Botões Principais de Ação da Empresa */}
-          <div className="space-y-3.5 mb-6">
+          <div className="space-y-4 mb-6">
             {/* Website Oficial */}
             <a
               href={company.website.url}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-teal-500/30 hover:bg-teal-500/5 transition-all duration-300 group cursor-pointer"
+              className="flex items-center justify-between p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-teal-500/30 hover:bg-teal-500/5 transition-all duration-300 group cursor-pointer"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center group-hover:bg-teal-500/20 transition-all">
-                  <Globe className="w-5 h-5" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center group-hover:bg-teal-500/20 transition-all">
+                  <Globe className="w-6 h-6" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-semibold text-white">{company.website.label}</p>
-                  <p className="text-[11px] text-slate-400">{company.website.sublabel}</p>
+                  <p className="text-base font-semibold text-white">{company.website.label}</p>
+                  <p className="text-sm text-slate-400">{company.website.sublabel}</p>
                 </div>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-teal-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUpRight className="w-5 h-5 text-slate-500 group-hover:text-teal-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </a>
 
             {/* WhatsApp Direct Empresa */}
@@ -226,18 +226,18 @@ END:VCARD`;
               href={`https://wa.me/${company.whatsapp.url}?text=${encodeURIComponent(company.whatsapp.message)}`}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-green-500/30 hover:bg-green-500/5 transition-all duration-300 group cursor-pointer"
+              className="flex items-center justify-between p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-green-500/30 hover:bg-green-500/5 transition-all duration-300 group cursor-pointer"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center group-hover:bg-green-500/20 transition-all">
-                  <FaWhatsapp className="w-5 h-5" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center group-hover:bg-green-500/20 transition-all">
+                  <FaWhatsapp className="w-6 h-6" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-semibold text-white">{company.whatsapp.label}</p>
-                  <p className="text-[11px] text-slate-400">{company.whatsapp.sublabel}</p>
+                  <p className="text-base font-semibold text-white">{company.whatsapp.label}</p>
+                  <p className="text-sm text-slate-400">{company.whatsapp.sublabel}</p>
                 </div>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-green-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUpRight className="w-5 h-5 text-slate-500 group-hover:text-green-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </a>
 
             {/* Instagram Corporativo */}
@@ -245,90 +245,90 @@ END:VCARD`;
               href={company.instagram.url}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-pink-500/30 hover:bg-pink-500/5 transition-all duration-300 group cursor-pointer"
+              className="flex items-center justify-between p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-pink-500/30 hover:bg-pink-500/5 transition-all duration-300 group cursor-pointer"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center group-hover:bg-pink-500/20 transition-all">
-                  <FaInstagram className="w-5 h-5" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center group-hover:bg-pink-500/20 transition-all">
+                  <FaInstagram className="w-6 h-6" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-semibold text-white">{company.instagram.label}</p>
-                  <p className="text-[11px] text-slate-400">{company.instagram.sublabel}</p>
+                  <p className="text-base font-semibold text-white">{company.instagram.label}</p>
+                  <p className="text-sm text-slate-400">{company.instagram.sublabel}</p>
                 </div>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-pink-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUpRight className="w-5 h-5 text-slate-500 group-hover:text-pink-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </a>
 
             {/* E-mail Corporativo */}
             <a
               href={`mailto:${company.email.url}`}
-              className="flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-indigo-500/30 hover:bg-indigo-500/5 transition-all duration-300 group cursor-pointer"
+              className="flex items-center justify-between p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-indigo-500/30 hover:bg-indigo-500/5 transition-all duration-300 group cursor-pointer"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center group-hover:bg-indigo-500/20 transition-all">
-                  <Mail className="w-5 h-5" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center group-hover:bg-indigo-500/20 transition-all">
+                  <Mail className="w-6 h-6" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-semibold text-white">{company.email.label}</p>
-                  <p className="text-[11px] text-slate-400">{company.email.sublabel}</p>
+                  <p className="text-base font-semibold text-white">{company.email.label}</p>
+                  <p className="text-sm text-slate-400">{company.email.sublabel}</p>
                 </div>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUpRight className="w-5 h-5 text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </a>
           </div>
 
           {/* Botões Rápidos de Ação (Salvar, QR, Compartilhar) */}
-          <div className="grid grid-cols-3 gap-2.5 mt-2">
+          <div className="grid grid-cols-3 gap-3 mt-2">
             {/* Salvar Contato (vCard) */}
             <button
               onClick={downloadVCard}
-              className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-white/5 border border-white/5 hover:border-teal-400/20 hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
+              className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-teal-400/20 hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
             >
-              <div className="w-9 h-9 rounded-full bg-teal-400/10 text-teal-400 flex items-center justify-center">
-                <UserPlus className="w-4.5 h-4.5" />
+              <div className="w-12 h-12 rounded-full bg-teal-400/10 text-teal-400 flex items-center justify-center">
+                <UserPlus className="w-6 h-6" />
               </div>
-              <span className="text-[10px] font-medium text-slate-300">Salvar</span>
+              <span className="text-sm font-medium text-slate-300">Salvar</span>
             </button>
 
             {/* Mostrar QR Code */}
             <button
               onClick={() => setIsQRCodeModalOpen(true)}
-              className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-400/20 hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
+              className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-indigo-400/20 hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
             >
-              <div className="w-9 h-9 rounded-full bg-indigo-400/10 text-indigo-400 flex items-center justify-center">
-                <QrCode className="w-4.5 h-4.5" />
+              <div className="w-12 h-12 rounded-full bg-indigo-400/10 text-indigo-400 flex items-center justify-center">
+                <QrCode className="w-6 h-6" />
               </div>
-              <span className="text-[10px] font-medium text-slate-300">QR Code</span>
+              <span className="text-sm font-medium text-slate-300">QR Code</span>
             </button>
 
             {/* Compartilhar Link */}
             <button
               onClick={handleShare}
-              className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-white/5 border border-white/5 hover:border-pink-400/20 hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
+              className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-pink-400/20 hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
             >
-              <div className="w-9 h-9 rounded-full bg-pink-400/10 text-pink-400 flex items-center justify-center">
-                <Share2 className="w-4.5 h-4.5" />
+              <div className="w-12 h-12 rounded-full bg-pink-400/10 text-pink-400 flex items-center justify-center">
+                <Share2 className="w-6 h-6" />
               </div>
-              <span className="text-[10px] font-medium text-slate-300">Compartilhar</span>
+              <span className="text-sm font-medium text-slate-300">Compartilhar</span>
             </button>
           </div>
         </div>
 
         {/* Botão para abrir o Formulário de Enviar Contato de Volta */}
-        <div className="mt-8 pt-4 border-t border-white/5">
+        <div className="mt-8 pt-5 border-t border-white/5">
           <button
             onClick={() => setIsLeadModalOpen(true)}
-            className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-teal-500/20 to-indigo-500/20 hover:from-teal-500/30 hover:to-indigo-500/30 border border-teal-500/30 text-teal-300 hover:text-white font-medium text-xs tracking-wide flex items-center justify-center gap-2 transition-all cursor-pointer active:scale-98"
+            className="w-full py-4 px-4 rounded-2xl bg-gradient-to-r from-teal-500/20 to-indigo-500/20 hover:from-teal-500/30 hover:to-indigo-500/30 border border-teal-500/30 text-teal-300 hover:text-white font-medium text-base tracking-wide flex items-center justify-center gap-2 transition-all cursor-pointer active:scale-98"
           >
-            <SendToBack className="w-4 h-4" />
+            <SendToBack className="w-5 h-5" />
             Trocar Contatos / Deixar Meu Lead
           </button>
         </div>
       </main>
 
       {/* Footer Discreto */}
-      <footer className="mt-8 text-center relative z-10 w-full max-w-md">
-        <p className="text-[11px] text-slate-500 flex justify-center items-center gap-1">
+      <footer className="mt-6 text-center relative z-10 w-full">
+        <p className="text-sm text-slate-500 flex justify-center items-center gap-1">
           <span>Powered by</span>
           <span className="font-bold text-teal-400 tracking-wider">AUTOMATAS.TECH</span>
         </p>
