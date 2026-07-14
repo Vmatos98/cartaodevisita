@@ -137,7 +137,7 @@ END:VCARD`;
         <div>
           {/* Header do Cartão: Logo */}
           <div className="flex justify-center items-center mb-6 w-full">
-            <img src="/logo.png" alt="Automatas Tech Logo" className="h-20 object-contain" />
+            <img src="/logo.png" alt="Automatas Tech Logo" className="h-24 object-contain" />
           </div>
 
           {/* Avatar & Perfil do Funcionário */}
