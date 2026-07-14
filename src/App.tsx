@@ -131,9 +131,9 @@ END:VCARD`;
   };
 
   return (
-    <div className="text-slate-100 min-h-screen flex flex-col justify-between items-center px-4 py-8 relative overflow-x-hidden">
+    <div className="text-slate-100 min-h-screen flex flex-col justify-between items-center px-2 sm:px-4 py-6 sm:py-8 relative overflow-x-hidden">
       {/* Container Principal do Cartão */}
-      <main className="w-full max-w-md glass-card rounded-3xl p-6 relative z-10 transition-all duration-300 hover:border-teal-500/30 flex-grow flex flex-col justify-between">
+      <main className="w-full max-w-md glass-card rounded-3xl p-4 sm:p-6 relative z-10 transition-all duration-300 hover:border-teal-500/30 flex-grow flex flex-col justify-between">
         <div>
           {/* Header do Cartão: Logo */}
           <div className="flex justify-center items-center mb-6 w-full">
