@@ -131,9 +131,9 @@ END:VCARD`;
   };
 
   return (
-    <div className="text-slate-100 min-h-screen flex flex-col px-2 py-2 relative overflow-x-hidden w-full">
+    <div className="text-slate-100 min-h-screen flex flex-col px-4 py-4 relative overflow-x-hidden w-full">
       {/* Container Principal do Cartão */}
-      <main className="w-full glass-card rounded-xl px-4 py-5 relative z-10 transition-all duration-300 flex-grow flex flex-col justify-between">
+      <main className="w-full glass-card rounded-2xl px-6 py-8 relative z-10 transition-all duration-300 flex-grow flex flex-col justify-between">
         <div>
           {/* Header do Cartão: Logo */}
           <div className="flex justify-center items-center mb-6 w-full">
@@ -164,37 +164,37 @@ END:VCARD`;
             </div>
 
             {/* Nome, Cargo e Bio do Funcionário */}
-            <h1 className="text-2xl font-bold tracking-tight text-white">{profile.name}</h1>
-            <p className="text-sm text-brand-primary mt-1 font-medium">{profile.role}</p>
-            <p className="text-xs text-slate-400 mt-2 max-w-xs px-2">{profile.bio}</p>
+            <h1 className="text-3xl font-bold tracking-tight text-white">{profile.name}</h1>
+            <p className="text-base text-brand-primary mt-1 font-medium">{profile.role}</p>
+            <p className="text-sm text-slate-400 mt-2 max-w-sm px-2">{profile.bio}</p>
 
             {/* Contatos Diretos do Funcionário (Top Section) */}
-            <div className="flex gap-3 mt-4 w-full">
+            <div className="flex gap-3 mt-5 w-full">
               <a
                 href={`https://wa.me/${profile.whatsapp}?text=Olá%20${encodeURIComponent(
                   profile.name
                 )}!%20Vim%20através%20do%20seu%20cartão%20NFC.`}
                 target="_blank"
                 rel="noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-semibold hover:bg-teal-500/20 hover:border-teal-500/40 transition-all cursor-pointer active:scale-98"
+                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-semibold hover:bg-teal-500/20 hover:border-teal-500/40 transition-all cursor-pointer active:scale-98"
               >
-                <FaWhatsapp className="w-3.5 h-3.5" />
+                <FaWhatsapp className="w-4 h-4" />
                 WhatsApp
               </a>
               <a
                 href={`mailto:${profile.email}`}
-                className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold hover:bg-indigo-500/20 hover:border-indigo-500/40 transition-all cursor-pointer active:scale-98"
+                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-semibold hover:bg-indigo-500/20 hover:border-indigo-500/40 transition-all cursor-pointer active:scale-98"
               >
-                <Mail className="w-3.5 h-3.5" />
+                <Mail className="w-4 h-4" />
                 E-mail
               </a>
             </div>
           </div>
 
           {/* Divisor Elegante de Seção */}
-          <div className="relative flex py-5 items-center">
+          <div className="relative flex py-6 items-center">
             <div className="flex-grow border-t border-white/10"></div>
-            <span className="flex-shrink mx-4 text-[9px] uppercase tracking-widest text-slate-500 font-bold bg-slate-950/20 px-2 py-0.5 rounded border border-white/5">
+            <span className="flex-shrink mx-4 text-[10px] uppercase tracking-widest text-slate-500 font-bold bg-slate-950/20 px-3 py-1 rounded border border-white/5">
               Contatos da Empresa
             </span>
             <div className="flex-grow border-t border-white/10"></div>
